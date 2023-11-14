@@ -1,11 +1,10 @@
-// Returns a random number 
-
+// Returns a random number from 0 - 1
 const randNum = num => {
     return Math.floor(Math.random() * num);
 };
 
 
-// Function to run 
+// Function to run the program
 const jediGenerator = () => {
     const choices = {
         rank: ['Padawan', 'Knight', 'Master', 'Grand Master'],
@@ -17,6 +16,7 @@ const jediGenerator = () => {
     // A place to store the randomly selected choices.
     let generatedJedi = [];
 
+    // Iterate over the objects and store random choices to generatedJedi
     for (let choice in choices) {
         let choiceIndx = randNum(choices[choice].length);
     
@@ -39,10 +39,12 @@ const jediGenerator = () => {
         }
     }
 
+    // Format the output 
     let formatGeneratedJedi = generatedJedi.join("\n");
     return formatGeneratedJedi;
 }
 
+// Call the function
 console.log(jediGenerator());
 
 
